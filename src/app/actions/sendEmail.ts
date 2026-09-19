@@ -25,14 +25,14 @@ export async function sendEmail(
     };
   }
 
-
-
-
   try {
-    const data = await resend.emails.send({
-      from: "Minhas Brothers Inquiry <info@minhasbrothers.com>",
-      to: [process.env.CONTACT_RECIPIENT_EMAIL || "info@minhasbrothers.com"],
+    const { data, error } = await resend.emails.send({
+      // Sending FROM Resend's onboarding system prevents Bluehost's spoof filter
+      from: "Minhas Brothers Inquiry <onboarding@resend.dev>",
+      // Delivering TO your official domain email
+      to: ["info@minhasbrothers.com"],
       subject: `New Export Inquiry from ${name} (${company || "N/A"})`,
+      // Clicking "Reply" in your webmail will send your response directly to the customer
       replyTo: email,
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; color: #333;">
@@ -48,10 +48,11 @@ export async function sendEmail(
       `,
     });
 
-    if (data.error) {
+    if (error) {
+      console.error("Resend API Error:", error);
       return {
         success: false,
-        message: data.error.message || "Failed to send message.",
+        message: error.message || "Failed to send message.",
       };
     }
 
@@ -60,7 +61,7 @@ export async function sendEmail(
       message: "Thank you! Your inquiry has been sent successfully.",
     };
   } catch (error) {
-    console.error("Resend Error:", error);
+    console.error("Server Action Exception:", error);
     return {
       success: false,
       message: "An error occurred while sending your inquiry. Please try again.",
