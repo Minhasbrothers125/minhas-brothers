@@ -28,7 +28,7 @@ export async function sendEmail(
   try {
     const { data, error } = await resend.emails.send({
       // Sending FROM Resend's onboarding system prevents Bluehost's spoof filter
-      from: "Minhas Brothers Inquiry <onboarding@resend.dev>",
+      from: "Minhas Brothers Inquiry <info@minhasbrothers.com>",
       // Delivering TO your official domain email
       to: ["info@minhasbrothers.com"],
       subject: `New Export Inquiry from ${name} (${company || "N/A"})`,
