@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,13 +12,22 @@ export default function Navbar() {
   return (
     <nav className="bg-slate-900 text-white sticky top-0 z-50 shadow-md w-full">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center">
-        {/* Brand Logo - Kept inline on mobile to avoid vertical stretching */}
+        {/* Brand Logo with Image */}
         <Link 
           href="/" 
           onClick={() => setIsOpen(false)}
-          className="text-xl sm:text-2xl font-bold tracking-wide text-emerald-400 whitespace-nowrap"
+          className="flex items-center gap-2 text-xl sm:text-2xl font-bold tracking-wide text-emerald-400 whitespace-nowrap"
         >
-          MINHAS <span className="text-xs sm:text-sm font-normal text-gray-300 inline sm:inline-block ml-1">BROTHERS</span>
+          <Image 
+            src="/images/logo.jpg" 
+            alt="Minhas Brothers Logo" 
+            width={40} 
+            height={40} 
+            className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border border-emerald-400/40"
+          />
+          <span>
+            MINHAS <span className="text-xs sm:text-sm font-normal text-gray-300 inline sm:inline-block ml-1">BROTHERS</span>
+          </span>
         </Link>
 
         {/* Desktop Links (Hidden on Mobile) */}
@@ -72,7 +82,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden bg-slate-800/95 backdrop-blur-sm border-t border-slate-700/60 px-6 py-4 space-y-3 font-semibold text-sm animate-fadeIn">
+        <div className="md:hidden bg-slate-800/95 backdrop-blur-sm border-t border-slate-700/60 px-6 py-4 space-y-3 font-semibold text-sm">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
