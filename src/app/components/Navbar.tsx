@@ -9,15 +9,19 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="bg-slate-900 text-white sticky top-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Brand Logo */}
-        <Link href="/" className="text-2xl font-bold tracking-wide text-emerald-400">
-          MINHAS <span className="text-sm font-normal text-gray-300 block">BROTHERS</span>
+    <nav className="bg-slate-900 text-white sticky top-0 z-50 shadow-md w-full">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3.5 flex justify-between items-center">
+        {/* Brand Logo - Kept inline on mobile to avoid vertical stretching */}
+        <Link 
+          href="/" 
+          onClick={() => setIsOpen(false)}
+          className="text-xl sm:text-2xl font-bold tracking-wide text-emerald-400 whitespace-nowrap"
+        >
+          MINHAS <span className="text-xs sm:text-sm font-normal text-gray-300 inline sm:inline-block ml-1">BROTHERS</span>
         </Link>
 
         {/* Desktop Links (Hidden on Mobile) */}
-        <div className="hidden md:flex space-x-6 text-sm font-semibold">
+        <div className="hidden md:flex items-center space-x-6 text-sm font-semibold">
           <Link href="/" className="hover:text-emerald-400 transition">
             Home
           </Link>
@@ -37,10 +41,11 @@ export default function Navbar() {
           onClick={toggleMenu}
           type="button"
           aria-label="Toggle navigation menu"
-          className="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none focus:ring-2 focus:ring-emerald-400 rounded-md p-1"
+          aria-expanded={isOpen}
+          className="md:hidden text-gray-300 hover:text-emerald-400 focus:outline-none p-1.5 rounded-md hover:bg-slate-800 transition"
         >
           <svg
-            className="w-7 h-7"
+            className="w-6 h-6"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -67,32 +72,32 @@ export default function Navbar() {
 
       {/* Mobile Dropdown Menu */}
       {isOpen && (
-        <div className="md:hidden bg-slate-800 border-t border-slate-700 px-6 py-4 space-y-3 font-semibold text-sm">
+        <div className="md:hidden bg-slate-800/95 backdrop-blur-sm border-t border-slate-700/60 px-6 py-4 space-y-3 font-semibold text-sm animate-fadeIn">
           <Link
             href="/"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-emerald-400 transition"
+            className="block py-1 hover:text-emerald-400 transition"
           >
             Home
           </Link>
           <Link
             href="/products"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-emerald-400 transition"
+            className="block py-1 hover:text-emerald-400 transition"
           >
             Products
           </Link>
           <Link
             href="/about"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-emerald-400 transition"
+            className="block py-1 hover:text-emerald-400 transition"
           >
             About Us
           </Link>
           <Link
             href="/contact"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-emerald-400 transition"
+            className="block py-1 hover:text-emerald-400 transition"
           >
             Contact Us
           </Link>
