@@ -19,7 +19,7 @@ export default function Navbar() {
           className="flex items-center gap-2 text-xl sm:text-2xl font-bold tracking-wide text-emerald-400 whitespace-nowrap"
         >
           <Image 
-            src="/images/logo.jpg" 
+            src="/images/logo.png" 
             alt="Minhas Brothers Logo" 
             width={40} 
             height={40} 
