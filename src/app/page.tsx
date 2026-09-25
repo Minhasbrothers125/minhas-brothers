@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import ThreeDSection from '@/components/3d1';
 
 export default function HomePage() {
   return (
@@ -51,6 +52,39 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
 
       {/* 2. Key Highlights */}
       <section className="max-w-7xl mx-auto py-20 px-6">
