@@ -4,6 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+
+
+
+
 type CategoryType = "all" | "pulses" | "salt" | "rice";
 
 interface ProductItem {

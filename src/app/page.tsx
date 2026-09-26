@@ -1,9 +1,8 @@
 import Link from 'next/link';
-import ThreeDSection from '@/components/3d1';
-
 export default function HomePage() {
   return (
     <div className="bg-gray-50 text-gray-800">
+
       {/* 1. Hero Section */}
       <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-28 px-6 text-center">
         <div className="max-w-5xl mx-auto">
@@ -53,38 +52,6 @@ export default function HomePage() {
         </div>
       </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      
 
       {/* 2. Key Highlights */}
       <section className="max-w-7xl mx-auto py-20 px-6">
