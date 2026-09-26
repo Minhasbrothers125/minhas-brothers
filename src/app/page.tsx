@@ -1,19 +1,23 @@
-import Link from 'next/link';
+import Link from "next/link";
+import Scrollable3DHero from "@/app/components/Scrollable3DHero";
+
 export default function HomePage() {
   return (
     <div className="bg-gray-50 text-gray-800">
+      {/* FULL-WIDTH EDGE-TO-EDGE 3D SCROLL ANIMATION SECTION */}
+      <Scrollable3DHero />
 
       {/* 1. Hero Section */}
       <section className="relative bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-white py-28 px-6 text-center">
         <div className="max-w-5xl mx-auto">
           <span className="text-emerald-400 font-semibold tracking-widest text-xs uppercase bg-emerald-950/80 border border-emerald-800/50 px-4 py-1.5 rounded-full inline-block mb-4">
-            Leading Exporter from Pakistan.
+            Leading Exporter from Pakistan
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-            Connecting Pakistan’s Premium Agriculture & Salt to Global Markets
+            Connecting Pakistan’s Premium Agriculture &amp; Salt to Global Markets
           </h1>
           <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
-            <strong>Minhas Brothers</strong>  is a premier B2B export house delivering top-grade pulses, Pink Himalayan salt, and refined industrial salt to trusted partners in the USA, Russia, KSA, and worldwide.
+            <strong>Minhas Brothers</strong> is a premier B2B export house delivering top-grade pulses, Pink Himalayan salt, and refined industrial salt to trusted partners in the USA, Russia, KSA, and worldwide.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link 
@@ -51,7 +55,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
 
       {/* 2. Key Highlights */}
       <section className="max-w-7xl mx-auto py-20 px-6">
@@ -109,22 +112,22 @@ export default function HomePage() {
                 <span className="bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   Agro Commodities
                 </span>
-                <h3 className="text-2xl font-bold text-slate-800 mt-4 mb-3">Pulses & Legumes</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mt-4 mb-3">Pulses &amp; Legumes</h3>
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                   Pakistan produces some of the finest quality chickpeas and lentils in South Asia. Our processing facilities ensure zero impurities and consistent grain sizes.
                 </p>
                 <ul className="space-y-3 mb-8 text-sm text-gray-700">
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Chickpeas / Kabuli & Kala Chana (8mm, 9mm, 10mm)
+                    <span className="text-emerald-500 font-bold">✓</span> Chickpeas / Kabuli &amp; Kala Chana (8mm, 9mm, 10mm)
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Red Lentils (Masoor Dal - Whole & Split)
+                    <span className="text-emerald-500 font-bold">✓</span> Red Lentils (Masoor Dal - Whole &amp; Split)
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Yellow Split Peas & Mung Beans (Moong)
+                    <span className="text-emerald-500 font-bold">✓</span> Yellow Split Peas &amp; Mung Beans (Moong)
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Moisture-controlled & pest-free bulk packing
+                    <span className="text-emerald-500 font-bold">✓</span> Moisture-controlled &amp; pest-free bulk packing
                   </li>
                 </ul>
               </div>
@@ -142,22 +145,22 @@ export default function HomePage() {
                 <span className="bg-rose-100 text-rose-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
                   Natural Mineral Exporters
                 </span>
-                <h3 className="text-2xl font-bold text-slate-800 mt-4 mb-3">Pink Himalayan & Industrial Salt</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mt-4 mb-3">Pink Himalayan &amp; Industrial Salt</h3>
                 <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                   Extracted directly from Pakistani salt ranges, our salt products range from gourmet culinary pink salt to high-purity refined industrial grade sodium chloride.
                 </p>
                 <ul className="space-y-3 mb-8 text-sm text-gray-700">
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Edible Pink Himalayan Salt (Fine, Coarse & Granules)
+                    <span className="text-emerald-500 font-bold">✓</span> Edible Pink Himalayan Salt (Fine, Coarse &amp; Granules)
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Pink Salt Licks for Livestock & Agriculture
+                    <span className="text-emerald-500 font-bold">✓</span> Pink Salt Licks for Livestock &amp; Agriculture
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="text-emerald-500 font-bold">✓</span> Refined Industrial Salt (De-icing, Water Treatment)
                   </li>
                   <li className="flex items-center gap-2">
-                    <span className="text-emerald-500 font-bold">✓</span> Decorative Himalayan Salt Lamps & Craft Blocks
+                    <span className="text-emerald-500 font-bold">✓</span> Decorative Himalayan Salt Lamps &amp; Craft Blocks
                   </li>
                 </ul>
               </div>
@@ -185,7 +188,7 @@ export default function HomePage() {
             </p>
             <div className="space-y-4">
               <div className="p-4 bg-gray-50 border-l-4 border-emerald-500 rounded-r-lg">
-                <h4 className="font-bold text-slate-800 text-sm">Direct Port Access (Port Qasim & KPT)</h4>
+                <h4 className="font-bold text-slate-800 text-sm">Direct Port Access (Port Qasim &amp; KPT)</h4>
                 <p className="text-gray-600 text-xs mt-1">Faster container loading times and reduced transit delays for time-sensitive agricultural commodities.</p>
               </div>
               <div className="p-4 bg-gray-50 border-l-4 border-emerald-500 rounded-r-lg">
@@ -284,31 +287,31 @@ export default function HomePage() {
           <div className="relative p-6 bg-white rounded-xl shadow-sm border border-gray-200">
             <span className="text-4xl font-extrabold text-emerald-100 absolute top-4 right-4">01</span>
             <h3 className="text-lg font-bold text-slate-800 mb-2">Requirement</h3>
-            <p className="text-black-600 text-xs leading-relaxed">
+            <p className="text-gray-600 text-xs leading-relaxed">
               Submit your required quantity, grain/salt specification, and preferred packaging type.
             </p>
           </div>
 
           <div className="relative p-6 bg-white rounded-xl shadow-sm border border-gray-200">
             <span className="text-4xl font-extrabold text-emerald-100 absolute top-4 right-4">02</span>
-            <h3 className="text-lg font-bold text-slate-800 mb-2">Quotation & Samples</h3>
-            <p className="text-black-600 text-xs leading-relaxed">
+            <h3 className="text-lg font-bold text-slate-800 mb-2">Quotation &amp; Samples</h3>
+            <p className="text-gray-600 text-xs leading-relaxed">
               We provide competitive FOB/CIF quotes and dispatch physical samples for quality approval.
             </p>
           </div>
 
           <div className="relative p-6 bg-white rounded-xl shadow-sm border border-gray-200">
             <span className="text-4xl font-extrabold text-emerald-100 absolute top-4 right-4">03</span>
-            <h3 className="text-lg font-bold text-slate-800 mb-2">Processing & Packing</h3>
-            <p className="text-black-600 text-xs leading-relaxed">
+            <h3 className="text-lg font-bold text-slate-800 mb-2">Processing &amp; Packing</h3>
+            <p className="text-gray-600 text-xs leading-relaxed">
               Grains are color-sorted/cleaned or salt processed and packed into bags as per contracted terms.
             </p>
           </div>
 
           <div className="relative p-6 bg-white rounded-xl shadow-sm border border-gray-200">
             <span className="text-4xl font-extrabold text-emerald-100 absolute top-4 right-4">04</span>
-            <h3 className="text-lg font-bold text-slate-800 mb-2">Clearance & Dispatch</h3>
-            <p className="text-black-600 text-xs leading-relaxed">
+            <h3 className="text-lg font-bold text-slate-800 mb-2">Clearance &amp; Dispatch</h3>
+            <p className="text-gray-600 text-xs leading-relaxed">
               Customs clearance completed at Karachi Port and loaded onto international shipping lines.
             </p>
           </div>
@@ -319,7 +322,7 @@ export default function HomePage() {
       <section className="bg-emerald-900 text-white py-16 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Quality & Compliance First</h2>
+            <h2 className="text-2xl md:text-3xl font-extrabold mb-2">Quality &amp; Compliance First</h2>
             <p className="text-emerald-200 text-sm max-w-2xl">
               All exports from Minhas Brothers adhere to strict phytosanitary guidelines, government export regulations, and international health standards.
             </p>
